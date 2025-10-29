@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SaludLab — Folleto Virtual / Proyecto II</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="SaludLab — Folleto Virtual. Proyectos y evidencias del curso.">
+  <meta property="og:title" content="SaludLab — Folleto Virtual" />
+  <meta property="og:description" content="Proyectos por día, correcciones y evidencias. Proyecto II." />
+  <meta property="og:image" content="assets/images/cover.png" />
+  <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+<body class="theme-medical">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <svg class="logo" width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0a8f87" d="M12 2C10 2 9 3 9 4v5H6a1 1 0 000 2h3v6a4 4 0 008 0V11h3a1 1 0 000-2h-3V4c0-1-1-2-3-2z"/></svg>
+        SaludLab — Folleto Virtual
+      </a>
+
+      <div class="header-right">
+        <div class="badge accredited">Aula: Salud & Tecnología</div>
+        <button id="navToggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+
+    <nav id="mainNav" class="main-nav">
+      <a href="#lunes">Lunes</a>
+      <a href="#martes">Martes</a>
+      <a href="#miercoles">Miércoles</a>
+      <a href="#jueves">Jueves</a>
+      <a href="#viernes">Viernes</a>
+      <a href="#proyecto1">Proyecto I</a>
+      <a href="#evidencias">Evidencias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Folleto Virtual — Proyecto II</h1>
+          <p class="tagline">Recopilación de proyectos por día con la versión corregida del Proyecto I. Material validado para difusión académica.</p>
+
+          <div class="hero-cta">
+            <a class="btn" href="#proyecto1">Ver Proyecto I</a>
+            <a class="btn ghost" href="#evidencias">Ver Evidencias</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="stat">
+              <strong id="visitorCount">Visitas (local): 0</strong>
+              <small>contador local</small>
+            </div>
+            <div class="stat">
+              <strong class="micro">🩺</strong>
+              <small>Enfoque: Medicina</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- simple illustrative SVG heartbeat + stethoscope -->
+          <svg viewBox="0 0 600 400" class="hero-svg">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#0a8f87" stop-opacity="0.95" />
+                <stop offset="1" stop-color="#0b66c3" stop-opacity="0.95" />
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="600" height="400" fill="url(#g)" opacity="0.08"/>
+            <g transform="translate(60,80)" fill="none" stroke="#0a8f87" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M0 120 L80 120 L96 72 L128 192 L160 48 L192 120 L240 120 L320 120" stroke="#0b66c3" />
+              <circle cx="420" cy="80" r="52" stroke="#0a8f87" fill="#fff" />
+              <path d="M405 95c7 7 20 7 28 0" stroke="#0b66c3" stroke-width="3"/>
+              <path d="M405 65c7-7 20-7 28 0" stroke="#0b66c3" stroke-width="3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="presentacion" class="wrap section elevated">
+      <h2>Presentación — Diapositivas</h2>
+      <p class="lead">Galería de imágenes y diapositivas del proyecto. Usa las flechas, las miniaturas o el teclado.</p>
+
+      <div class="slideshow">
+        <!-- Main Swiper -->
+        <div class="swiper main-swiper" aria-roledescription="carousel" aria-label="Presentación del proyecto">
+          <div class="swiper-wrapper">
+            <figure class="swiper-slide"><img src="assets/images/slide1.png" alt="Slide 1"><figcaption>Portada</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide2.png" alt="Slide 2"><figcaption>Que es la enfermedad de Tay-Sachs</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide3.png" alt="Slide 3"><figcaption>Capitulo I</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide4.png" alt="Slide 4"><figcaption>Planteamiento de la investigación</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide5.png" alt="Slide 5"><figcaption>Objetivos de la investigación</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide6.png" alt="Slide 6"><figcaption>Justificación de la investigación</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide7.png" alt="Slide 7"><figcaption>Capitulo II</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide8.png" alt="Slide 8"><figcaption>Antecedentes de la investigación</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide9.png" alt="Slide 9"><figcaption>Bases Teóricas</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide10.png" alt="Slide 10"><figcaption>Tipo de Investigación</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide11.png" alt="Slide 11"><figcaption>Técnicas e instrumentos de recolección de datos</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide12.png" alt="Slide 12"><figcaption>Capitulo III</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide13.png" alt="Slide 13"><figcaption>Resultados</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide14.png" alt="Slide 14"><figcaption>Contrastacion Teórica</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide15.png" alt="Slide 15"><figcaption>Conclusiones</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide16.png" alt="Slide 16"><figcaption>Recomendaciones</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide17.png" alt="Slide 17"><figcaption>Referencias Bibliográficas</figcaption></figure>
+            <figure class="swiper-slide"><img src="assets/images/slide18.png" alt="Slide 18"><figcaption>Agradecimientos</figcaption></figure>
+          </div>
+
+          <!-- Navigation & Pagination -->
+          <div class="swiper-button-prev" aria-label="Anterior"></div>
+          <div class="swiper-button-next" aria-label="Siguiente"></div>
+          <div class="swiper-pagination" role="navigation" aria-label="Paginación"></div>
+        </div>
+
+        <!-- Thumbnails (thumbs) -->
+        <div class="swiper thumbs-swiper" aria-hidden="false" aria-label="Miniaturas">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/slide1.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide2.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide3.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide4.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide5.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide6.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide7.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide8.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide9.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide10.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide11.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide12.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide13.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide14.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide15.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide16.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide17.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/slide18.png" alt=""></div>
+          </div>
+        </div>
+
+        <div class="slideshow-controls">
+          <button id="playPause" class="btn ghost" aria-pressed="false">Pausa</button>
+          <a class="small-link" href="docs/Presentacion.pptx" download>Descargar presentación (PPTX)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="lunes" class="wrap section elevated">
+      <div class="section-head">
+        <h2>Lunes — Diagnóstico y planteamiento</h2>
+        <p class="lead">Resumen del trabajo: objetivos, metodología y hallazgos iniciales.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card accent">
+          <h3>Actividad</h3>
+          <p>Revisión bibliográfica y planteamiento del caso clínico. Se aplicaron herramientas ofimáticas para la síntesis.</p>
+          <div class="tag-list"><span class="tag">Resumen</span><span class="tag">Fuentes</span></div>
+        </article>
+        <article class="card">
+          <h3>Recursos</h3>
+          <p>Enlace a documento y diapositivas.</p>
+          <a class="small-link" href="docs/Lunes_reporte.pdf" target="_blank">Descargar</a>
+        </article>
+      </div>
+    </section>
+<!-- Daily sections 
+    <section id="martes" class="wrap section">
+      <h2>Martes — Desarrollo</h2>
+      <p class="lead">Actividades de laboratorio, prototipos y evidencia práctica.</p>
+    </section>
+
+    <section id="miercoles" class="wrap section">
+      <h2>Miércoles — Análisis</h2>
+      <p class="lead">Interpretación de datos y recomendaciones clínicas.</p>
+    </section>
+
+    <section id="jueves" class="wrap section">
+      <h2>Jueves — Comunicación</h2>
+      <p class="lead">Preparación del material para redes y difusión académica.</p>
+    </section>
+
+    <section id="viernes" class="wrap section">
+      <h2>Viernes — Cierre y entrega</h2>
+      <p class="lead">Compilación final, correcciones y verificación.</p>
+    </section>
+-->
+    <section id="proyecto1" class="wrap section highlighted">
+      <h2>Proyecto I (con correcciones)</h2>
+      <p>Versión corregida y comentada para revisión docente.</p>
+      <p><a class="btn" href="docs/Proyecto_I_corregido.pdf" target="_blank" rel="noopener">Descargar Proyecto I</a></p>
+      <div class="notes">
+        <strong>Notas del coordinador:</strong>
+        <p>Se integraron las observaciones del docente y se aclararon los procedimientos experimentales.</p>
+      </div>
+    </section>
+
+    <!-- BEGIN: Investigación (Tay-Sachs) - insertado desde a.txt -->
+    <section id="investigacion" class="wrap section elevated">
+      <h2>Investigación: Enfermedad de Tay‑Sachs</h2>
+      <p class="lead">Trabajo completo dividido en entradas tipo blog para facilitar lectura y navegación. Descarga original: <a class="small-link" href="docs/TaySachs_investigacion.txt" download>TaySachs_investigacion.txt</a></p>
+
+      <article class="post">
+        <header>
+          <h3>INTRODUCCIÓN</h3>
+        </header>
+        <div class="post-body">
+          <p>La enfermedad de Tay‑Sachs es una enfermedad genética autosómica recesiva que consiste en degenera progresivamente el sistema nervioso central por la acumulación de gangliósidos, especialmente en la GM2, en las células de las neuronas. Se trata de una de las enfermedades neurodegenerativas de mayor consideración y devastadora que se presentan en los niños en los primeros meses de sus vidas, teniendo un peso considerable tanto en la salud del niño como en la familia. Aunque su prevalencia es mucho mayor en ciertos grupos poblacionales específicos, como puede ser la judía ashkenazi, su aparición en otros grupos aislados genéticamente o en población general ha sido documentada, lo que nos muestra que es importante entender su patogenia y su clínica en varios poblamientos.</p>
+
+          <p>El estudio de las manifestaciones neurológicas en esta fase inicial de la enfermedad de Tay‑Sachs posibilita no solamente hacer aseveraciones de tipo clínico, sino contribuir también al estudio de su evolución y de los mecanismos fisiopatológicos implicados. Para este análisis, es necesario ahondar en la descripción de los signos presentes en los niños de 3 a 6 meses, ya que esta información puede ayudar a distinguir otras condiciones neurológicas infantiles, además de ser útil para el ejercicio de un diagnóstico diferencial correcto. La evolución clínica mostrada por los pacientes también puede significar una pieza clave para las futuras terapias y para el establecimiento de protocolos de seguimiento clínico y de atención.</p>
+
+          <p>El principal objetivo de esta investigación es revisar con la profundidad el curso evolutivo y las manifestaciones neurológicas de la enfermedad de Tay‑Sachs en niños entre 3‑6 meses de edad. De esta manera aportamos datos que enriquecerán el conocimiento sobre esta enfermedad en la población venezolana, desde su fenotipo en esta temprana edad, para contribuir a la formación y actualización del personal médico y de salud que debe manejar casos similares, con el estudio pretendemos ofrecer una completa visión y establecer las bases para futuras investigaciones y mejorar la calidad de la atención clínica que se puede brindar a los niños que padecen esta enfermedad congénita y devastadora.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>CAPÍTULO I — EL PROBLEMA</h3>
+        </header>
+        <div class="post-body">
+          <h4>Planteamiento del problema</h4>
+          <p>La enfermedad de Tay‑Sachs (ETS) es un trastorno neurodegenerativo heredado por medio de un patrón autosómico recesivo que se origina por la falta de la expresión de la enzima hexosaminidasa A y que produce la acumulación del GM2 gangliósido en el SNC y de este modo, una disfunción neuronal. En la población afectada los signos clínicos al principio pueden ser no evidentes y confundirse con otros retrasos del desarrollo o con enfermedades neurológicas simples en los primeros meses de vida, aunque la ETS tiende a ser una enfermedad de curso temprano y progresiva, con un período crítico que está localizado entre los tres y seis meses de vida, lo que supone un marco temporal importante en términos del desarrollo neuropsicomotor para los infantes, pues las habilidades sensorio‑motoras, la automatización de respuestas y la organización de conductas adaptativas comienzan a iniciarse en esta etapa y aun así existe carencia de información sistemática y homogénea en torno a las manifestaciones neurológicas específicas que caracterizan el hallazgo inicial de la ETS en este rango etario y en torno a la aceleración y el tipo de esa progresión temprana.</p>
+
+          <p>Ésta falta de conocimiento dificulta la identificación temprana, la reorientación clínica, la planificación de intervenciones de tratamiento multidisciplinario y el apoyo a las familias a las que afecta la enfermedad.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>OBJETIVOS</h3>
+        </header>
+        <div class="post-body">
+          <h4>Objetivo principal</h4>
+          <p>Revisar con profundidad el curso evolutivo y las manifestaciones neurológicas de la enfermedad de Tay‑Sachs en niños entre 3‑6 meses de edad.</p>
+
+          <h4>Objetivos específicos</h4>
+          <ul>
+            <li>Identificar causas genéticas y bioquímicas asociadas.</li>
+            <li>Analizar manifestaciones neurológicas en el intervalo 3‑6 meses.</li>
+            <li>Describir la progresión clínica en los primeros meses de vida.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>MARCO TEÓRICO Y CONTEXTO</h3>
+        </header>
+        <div class="post-body">
+          <p>La ETS es una gangliosidosis lisosomal por mutaciones en el gen HEXA. El inicio clásico se sitúa entre los 3‑6 meses, con pérdida de hitos, alteraciones del tono, compromiso visual y, en etapas posteriores, convulsiones. El diagnóstico combina pruebas enzimáticas y moleculares, complementadas por EEG y neuroimagen cuando procede. El manejo actual es multidisciplinario y principalmente paliativo; existen líneas de investigación en terapia génica y reemplazo enzimático.</p>
+
+          <p>Se revisan aquí la fisiopatología (acumulación de GM2 y estrés lisosomal), el desarrollo neurológico en 3‑6 meses (mielinización y maduración motora) y la evidencia sobre diagnósticos y terapias emergentes.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>RESULTADOS — HALLAZGOS PRINCIPALES</h3>
+        </header>
+        <div class="post-body">
+          <p>En lactantes de 3‑6 meses los signos más frecuentes son irritabilidad, llanto inconsolable, alteraciones del tono (hipotonía o variaciones), retraso de hitos motores y, en subgrupos con evolución rápida, aparición temprana de convulsiones con actividad epileptiforme en EEG. La evidencia sugiere asociación entre signos motores precoces y curso más acelerado, pero los estudios presentan tamaños de muestra reducidos y heterogeneidad metodológica.</p>
+
+          <p>Comparado con revisiones previas (p. ej. De Castro, NIH, StatPearls) hay coherencia general en la descripción, pero falta estandarización para el subgrupo 3‑6 meses.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>CONCLUSIONES Y RECOMENDACIONES</h3>
+        </header>
+        <div class="post-body">
+          <h4>Conclusiones</h4>
+          <p>La ventana 3‑6 meses es crítica para la detección precoz de ETS. Una descripción sistemática de signos permite mejorar el diagnóstico diferencial y los planes de atención multidisciplinaria.</p>
+
+          <h4>Recomendaciones prácticas</h4>
+          <ul>
+            <li>Desarrollar un algoritmo de alarma para 3‑6 meses (tono, hiperreflexia, llanto persistente, pérdida de hitos, convulsiones).</li>
+            <li>Implementar rutas de derivación rápida a neuropediatría.</li>
+            <li>Establecer protocolos multidisciplinarios y seguimiento hasta 12 meses.</li>
+            <li>Capacitación del personal de salud y apoyo psicosocial a las familias.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="post">
+        <header>
+          <h3>REFERENCIAS (selección)</h3>
+        </header>
+        <div class="post-body">
+          <ul>
+            <li>Adam et al., 2023; StatPearls Publishing.</li>
+            <li>De Castro Lydia, 2023.</li>
+            <li>Orphanet, 2023.</li>
+            <li>Myerowitz et al., 2002.</li>
+            <li>Praveen Kumar et al., 2024; StatPearls Publishing.</li>
+          </ul>
+          <p>La lista completa se mantiene en el archivo descargable.</p>
+        </div>
+      </article>
+    </section>
+    <!-- END: Investigación (Tay-Sachs) -->
+
+    <section id="evidencias" class="wrap section">
+      <h2>Evidencias de difusión</h2>
+      <p class="lead">Capturas, publicaciones y comprobantes de envío a redes y correo institucional.</p>
+      <ul class="evidence-list">
+        <li><strong>Instagram</strong> — captura y enlace</li>
+        <li><strong>Facebook</strong> — publicación compartida</li>
+        <li><strong>Correo</strong> — lista de envío y comprobante</li>
+      </ul>
+
+      <div class="share">
+        <p>Compartir proyecto:</p>
+        <button class="btn share-btn" data-network="facebook">Compartir en Facebook</button>
+        <button class="btn share-btn" data-network="twitter">Compartir en Twitter</button>
+        <button class="btn share-btn" data-network="whatsapp">Compartir en WhatsApp</button>
+      </div>
+    </section>
+
+    <section id="contacto" class="wrap section">
+      <h2>Contacto / Entrega</h2>
+      <p>Correo de contacto: <a href="mailto:saludlab@ejemplo.edu">saludlab@ejemplo.edu</a></p>
+      <form id="contactForm" class="contact-form" onsubmit="return false;">
+        <label>
+          Nombre
+          <input type="text" id="name" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Mensaje
+          <textarea id="message" placeholder="Mensaje" required></textarea>
+        </label>
+        <button id="sendBtn" class="btn">Enviar (demo)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>SaludLab — Folleto Virtual · Material educativo. Sube archivos en <code>docs/</code> y recursos gráficos en <code>assets/images/</code>.</p>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
