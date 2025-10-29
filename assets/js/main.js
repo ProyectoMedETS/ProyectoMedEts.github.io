@@ -1,4 +1,28 @@
-// ...existing code...
+// Server/shared counter using CountAPI (no backend required)
+(function globalCounter(){
+  const vEl = document.getElementById('visitorCount');
+  if(!vEl) return;
+  const namespace = 'proyectoladilla_global'; // cambia si quieres
+  const key = 'visitas';
+  const url = `https://api.countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      if(data && typeof data.value !== 'undefined'){
+        vEl.textContent = `Visitas: ${data.value}`;
+        vEl.animate([{ transform: 'scale(.98)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'cubic-bezier(.2,.9,.2,1)' });
+      }
+    })
+    .catch(()=> {
+      // fallback local
+      const keyLS = 'proyectoladilla_visits';
+      let visits = parseInt(localStorage.getItem(keyLS) || '0',10);
+      visits = isNaN(visits)?1:visits+1;
+      localStorage.setItem(keyLS, visits);
+      vEl.textContent = `Visitas: ${visits}`;
+    });
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
   // Nav toggle for small screens
   const nav = document.getElementById('mainNav');
