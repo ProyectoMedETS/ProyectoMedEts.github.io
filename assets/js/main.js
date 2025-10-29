@@ -39,16 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // Local visitor counter (browser-local) with subtle animation
-  const vEl = document.getElementById('visitorCount');
-  const key = 'proyectoladilla_visits';
-  let visits = parseInt(localStorage.getItem(key) || '0', 10);
-  visits = isNaN(visits) ? 1 : visits + 1;
-  localStorage.setItem(key, visits);
-  if(vEl){
-    vEl.textContent = `Visitas (local): ${visits}`;
-    vEl.animate([{ transform: 'scale(0.98)' }, { transform: 'scale(1)' }], { duration: 420, easing: 'cubic-bezier(.2,.9,.2,1)' });
-  }
+
 
   // Share buttons
   document.querySelectorAll('.share-btn').forEach(btn=>{
