@@ -24,22 +24,77 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function(){
-  // Nav toggle for small screens
+  // Nav toggle for small screens (protegido contra elementos faltantes)
   const nav = document.getElementById('mainNav');
   const toggle = document.getElementById('navToggle');
-  toggle.addEventListener('click', ()=> nav.classList.toggle('show'));
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('show'));
+  }
 
-  // Smooth anchor scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', function(e){
-      const href = this.getAttribute('href');
-      if(href === '#' || href === '') return;
+  // Smooth anchor scrolling (asegurar existencia)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener && a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href === '#' || href === '#!' ) return;
       const target = document.querySelector(href);
-      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); nav.classList.remove('show'); }
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', href);
+      }
     });
   });
 
+  // --- Contador global (CountAPI) con comprobaciones y fallback ---
+  (async function countApiCounter(){
+    const vEl = document.getElementById('visitorCount');
+    if (!vEl) return;
 
+    const ns = 'proyectoladilla_global';
+    const key = 'visitas';
+    const getUrl = `https://api.countapi.xyz/get/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`;
+    const hitUrl = `https://api.countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`;
+
+    const show = (n, prefix = 'Visitas') => {
+      vEl.textContent = `${prefix}: ${n}`;
+      try { vEl.animate([{ transform: 'scale(.98)' }, { transform: 'scale(1)' }], { duration: 300 }); } catch(e){/* ignore */ }
+    };
+
+    try {
+      // intenta leer primero (no incrementa)
+      const rGet = await fetch(getUrl);
+      if (rGet.ok) {
+        const d = await rGet.json();
+        if (d && typeof d.value !== 'undefined') show(d.value);
+      }
+
+      // throttle: evita incrementar muchas veces desde el mismo navegador
+      const last = parseInt(localStorage.getItem('countapi_last') || '0', 10);
+      const now = Date.now();
+      const THROTTLE_MS = 12 * 60 * 60 * 1000; // 12 horas
+
+      if (isNaN(last) || (now - last) > THROTTLE_MS) {
+        const rHit = await fetch(hitUrl);
+        if (rHit.ok) {
+          const dh = await rHit.json();
+          if (dh && typeof dh.value !== 'undefined') {
+            show(dh.value);
+            localStorage.setItem('countapi_last', String(now));
+          }
+        } else {
+          throw new Error('CountAPI HIT failed');
+        }
+      }
+    } catch (err) {
+      console.warn('CountAPI error (fallo a la red o DNS):', err);
+      // fallback local (solo para mostrar algo)
+      const keyLS = 'proyectoladilla_visits';
+      let visits = parseInt(localStorage.getItem(keyLS) || '0', 10);
+      visits = isNaN(visits) ? 1 : visits + 1;
+      localStorage.setItem(keyLS, visits);
+      show(visits, 'Visitas (local)');
+    }
+  })();
 
   // Share buttons
   document.querySelectorAll('.share-btn').forEach(btn=>{
